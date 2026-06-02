@@ -16,4 +16,14 @@ public class CustomerRepository{
 		return AllData.customers;
 		//Todo: code to get all customers from the database
 	}
+
+	public Customer getCustomerById(int id) {
+		List<Customer> customers = AllData.customers;
+		for(Customer customer : customers) {
+			if(customer.getId() == id) {
+				return customer;
+			}
+		}
+		return null;
+	}
 }
