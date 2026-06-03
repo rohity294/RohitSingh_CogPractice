@@ -1,35 +1,46 @@
 package com.example.demo.models;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "customers")
 public class Customer {
-   private int id;
-   private String name;
-   
-   public Customer() {
-	super();
-   }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-   public Customer(int id, String name) {
-	super();
-	this.id = id;
-	this.name = name;
-   }
+    @Column(nullable = false)
+    private String name;
 
-   public int getId() {
-	return id;
-   }
+    public Customer() {
+        super();
+    }
 
-   public void setId(int id) {
-	this.id = id;
-   }
+    public Customer(Integer id, String name) {
+        super();
+        this.id = id;
+        this.name = name;
+    }
 
-   public String getName() {
-	return name;
-   }
+    public Integer getId() {
+        return id;
+    }
 
-   public void setName(String name) {
-	this.name = name;
-   }
-   
-   
-   
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }

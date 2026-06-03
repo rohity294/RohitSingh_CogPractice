@@ -17,10 +17,14 @@ public class CustomerService {
    }
    
    public List<Customer> getAllCustomers(){
-	   return customerRepository.getAllCustomers();
+       return customerRepository.findAll();
    }
 
    public Customer getCustomerById(int id) {
-	return customerRepository.getCustomerById(id);
+    	return customerRepository.findById(id).orElse(null);
    }
+
+    public Customer createCustomer(Customer customer) {
+        return customerRepository.save(customer);
+    }
 }
