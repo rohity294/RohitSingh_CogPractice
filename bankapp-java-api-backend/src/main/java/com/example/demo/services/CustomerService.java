@@ -20,7 +20,7 @@ public class CustomerService {
        return customerRepository.findAll();
    }
 
-   public Customer getCustomerById(int id) {
+   public Customer getCustomerById(String id) {
     	return customerRepository.findById(id).orElse(null);
    }
 

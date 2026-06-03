@@ -1,37 +1,29 @@
 package com.example.demo.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
-@Table(name = "customers")
+@Document(collection = "customers")
 public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
-    @Column(nullable = false)
+    @Id
+    private String id;
+
     private String name;
 
     public Customer() {
-        super();
     }
 
-    public Customer(Integer id, String name) {
-        super();
+    public Customer(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -42,5 +34,4 @@ public class Customer {
     public void setName(String name) {
         this.name = name;
     }
-
 }
