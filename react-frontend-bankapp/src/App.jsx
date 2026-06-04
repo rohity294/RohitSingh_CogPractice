@@ -20,7 +20,7 @@ function App() {
               <h2>Banking made really simple</h2>
               <p>Secure accounts, instant transfers, and smart savings tools.</p>
               <div className="cta">
-                <button className="primary">Get Started</button>
+                <button className="primary">Lets Get Started</button>
                 <button className="secondary">Learn More</button>
               </div>
             </div>
