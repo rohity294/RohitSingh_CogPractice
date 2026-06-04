@@ -2,7 +2,20 @@
 // Configure the backend base URL with Vite env var `VITE_API_BASE`.
 
 // Default to local Spring Boot backend when VITE_API_BASE is not provided.
-const BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://localhost:8080'
+
+const BACKEND_LOCAL = "";
+const BACKEND_REMOTE_RENDER = "";
+
+const isBackendLocal = false;
+const isBackendRemote = true;
+
+if(isBackendLocal){
+    const BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://localhost:8080';
+}
+if(isBackendRemote){
+    const BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://springbootrestapibackend-with-db.onrender.com:8080';
+}
+
 
 async function request(path, opts = {}) {
   const url = `${BASE_URL}${path}`
