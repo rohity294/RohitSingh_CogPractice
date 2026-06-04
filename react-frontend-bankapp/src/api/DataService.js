@@ -8,8 +8,8 @@ const BACKEND_REMOTE_RENDER = "";
 
 
 const BASE_URL = "";
-const isBackendLocal = false;
-const isBackendRemote = true;
+let isBackendLocal = false;
+let isBackendRemote = true;
 
 if(isBackendLocal){
     BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://localhost:8080';
