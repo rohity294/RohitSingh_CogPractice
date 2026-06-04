@@ -12,7 +12,7 @@ if(isBackendLocal){
     BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://localhost:8080';
 }
 if(isBackendRemote){
-    BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'https://springbootrestapibackend-with-db.onrender.com:8080';
+    BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'https://springbootrestapibackend-with-db.onrender.com';
 }
 
 
