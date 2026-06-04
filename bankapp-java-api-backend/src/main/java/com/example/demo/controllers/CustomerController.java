@@ -17,7 +17,8 @@ import com.example.demo.models.Customer;
 import com.example.demo.services.CustomerService;
 
 
-@CrossOrigin(origins = "http://localhost:5173")
+//@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class CustomerController {
