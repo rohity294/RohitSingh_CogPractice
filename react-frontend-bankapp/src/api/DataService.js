@@ -6,14 +6,16 @@
 const BACKEND_LOCAL = "";
 const BACKEND_REMOTE_RENDER = "";
 
+
+const BASE_URL = "";
 const isBackendLocal = false;
 const isBackendRemote = true;
 
 if(isBackendLocal){
-    const BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://localhost:8080';
+    BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://localhost:8080';
 }
 if(isBackendRemote){
-    const BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://springbootrestapibackend-with-db.onrender.com:8080';
+    BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://springbootrestapibackend-with-db.onrender.com:8080';
 }
 
 
