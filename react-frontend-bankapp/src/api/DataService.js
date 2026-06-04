@@ -3,11 +3,8 @@
 
 // Default to local Spring Boot backend when VITE_API_BASE is not provided.
 
-const BACKEND_LOCAL = "";
-const BACKEND_REMOTE_RENDER = "";
 
-
-const BASE_URL = "";
+let BASE_URL = "";
 let isBackendLocal = false;
 let isBackendRemote = true;
 
