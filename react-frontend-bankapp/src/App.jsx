@@ -17,7 +17,7 @@ function App() {
         <>
           <main className="hero">
             <div className="hero-content">
-              <h2>Banking made simple</h2>
+              <h2>Banking made really simple</h2>
               <p>Secure accounts, instant transfers, and smart savings tools.</p>
               <div className="cta">
                 <button className="primary">Get Started</button>
