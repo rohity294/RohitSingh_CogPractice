@@ -1,0 +1,329 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --surface: #111827;
+  --surface-strong: #1f2937;
+  --surface-soft: #374151;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border: rgba(148, 163, 184, 0.24);
+  --primary: #38bdf8;
+  --primary-strong: #22d3ee;
+  --success: #4ade80;
+  --danger: #f472b6;
+  --shadow: 0 20px 50px rgba(15, 23, 42, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+  :root {
+    color-scheme: light;
+    --bg: #f7fbff;
+    --surface: #ffffff;
+    --surface-strong: #f8fafc;
+    --surface-soft: #eef2f7;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --border: rgba(15, 23, 42, 0.06);
+    --primary: #0ea5e9;
+    --primary-strong: #0284c7;
+    --success: #16a34a;
+    --danger: #ef4444;
+    --shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+  }
+
+button {
+  font: inherit;
+}
+    background: radial-gradient(circle at top, rgba(14,165,233,0.06), transparent 26%),
+      linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+  display: grid;
+  gap: 28px;
+}
+
+.bank-header,
+.section-header {
+  .bank-header {
+    padding: 26px 28px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+  padding: 26px 28px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: rgba(30, 41, 59, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  display: grid;
+  .account-panel,
+  .account-selector,
+  .action-card,
+  .transactions-section {
+    background: var(--surface-strong);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+  }
+  border-radius: 14px;
+  background: rgba(56, 189, 248, 0.16);
+  color: var(--primary-strong);
+  font-weight: 700;
+}
+  .account-balance div {
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--surface);
+  }
+}
+
+.bank-header p,
+.section-label {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  .account-button {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 22px;
+    background: var(--surface);
+    color: var(--text);
+    text-align: left;
+  }
+}
+
+.profile-button,
+.secondary-button {
+  .account-button.active {
+    background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(14,165,233,0.04));
+    border: 1px solid rgba(14,165,233,0.18);
+  }
+
+.profile-button:hover,
+.secondary-button:hover,
+.account-button:hover,
+.primary-button:hover {
+  .action-card {
+    padding: 28px;
+    display: grid;
+    gap: 18px;
+    background: var(--surface-strong);
+  }
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+}
+  .transactions-section {
+    padding: 28px;
+  }
+.action-card,
+.transactions-section {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.account-panel {
+  padding: 30px;
+  display: grid;
+  gap: 22px;
+}
+
+  .transactions-table {
+    margin-top: 22px;
+    display: grid;
+    gap: 10px;
+  }
+  .table-row {
+    display: grid;
+    grid-template-columns: 96px minmax(200px, 1fr) 1fr auto;
+    gap: 16px;
+    align-items: center;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: var(--surface);
+  }
+  border-radius: 20px;
+  background: rgba(30, 41, 59, 0.86);
+}
+
+.account-balance span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.account-balance strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.55rem;
+}
+
+.account-selector {
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.account-button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+  background: rgba(30, 41, 59, 0.8);
+  color: var(--text);
+  text-align: left;
+}
+
+.account-button strong {
+  font-size: 1.05rem;
+}
+
+.account-button.active {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(56, 189, 248, 0.05));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.actions-section {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.action-card {
+  padding: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.action-card h3 {
+  margin: 0;
+}
+
+.action-card p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  background: linear-gradient(135deg, #38bdf8, #22d3ee);
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.transactions-section {
+  padding: 28px;
+}
+
+.transactions-table {
+  margin-top: 22px;
+  display: grid;
+  gap: 10px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 96px minmax(200px, 1fr) 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(30, 41, 59, 0.76);
+}
+
+.header-row {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table-row span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.credit {
+  color: var(--success);
+}
+
+.debit {
+  color: var(--danger);
+}
+
+@media (max-width: 900px) {
+  .bank-app {
+    width: min(100%, calc(100% - 24px));
+  }
+
+  .bank-header,
+  .account-summary,
+  .actions-section,
+  .transactions-section {
+    border-radius: 22px;
+  }
+
+  .account-summary,
+  .actions-section {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-header,
+  .account-panel,
+  .account-selector,
+  .action-card,
+  .transactions-section {
+    padding: 22px;
+  }
+
+  .table-row {
+    grid-template-columns: 84px minmax(140px, 1fr) 1fr auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .bank-header,
+  .table-row,
+  .account-button,
+  .primary-button,
+  .secondary-button,
+  .profile-button {
+    width: 100%;
+  }
+
+  .bank-header,
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .table-row span {
+    font-size: 0.95rem;
+  }
+}
