@@ -7,4 +7,5 @@ import com.example.demo.models.Customer;
 
 @RepositoryRestResource
 public interface CustomerRepository extends MongoRepository<Customer, String> {
+	
 }

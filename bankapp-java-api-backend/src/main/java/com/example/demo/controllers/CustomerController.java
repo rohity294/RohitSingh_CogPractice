@@ -50,7 +50,9 @@ public class CustomerController {
 	 public ResponseEntity<Customer> getCustomerById(@PathVariable String id) {
 
 	     Customer customer = customerService.getCustomerById(id);
-
+         if (customer == null) {
+	         return ResponseEntity.notFound().build();
+	     }
 	     return ResponseEntity.ok(customer);
 	 }
 	 
