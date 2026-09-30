@@ -15,6 +15,7 @@ import com.example.demo.services.CustomerService;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*") // Allows CORS requests from any domain/origin
 public class CustomerController {
 	
 	private CustomerService customerService;
