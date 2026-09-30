@@ -15,7 +15,16 @@ import com.example.demo.services.CustomerService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*") // Allows CORS requests from any domain/origin
+// Allows CORS requests from any domain/origin
+@CrossOrigin(
+    origins = {
+        "https://laughing-yodel-jqwx5r66rg92p4x5-5173.app.github.dev",
+        "http://localhost:5173",
+        "http://localhost:3000"
+    },
+    allowedHeaders = "*",
+    allowCredentials = "true"
+)
 public class CustomerController {
 	
 	private CustomerService customerService;
