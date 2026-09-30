@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.models.Customer;
 import com.example.demo.services.CustomerService;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/api")
