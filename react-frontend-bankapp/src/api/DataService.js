@@ -15,6 +15,7 @@ if(isBackendRemote){
     BASE_URL = (import.meta.env && import.meta.env.VITE_API_BASE) || 'https://springbootrestapibackend-with-db.onrender.com';
 }
 
+BASE_URL = 'https://miniature-eureka-647jgv669vvh5xvg-8080.app.github.dev';
 
 async function request(path, opts = {}) {
   const url = `${BASE_URL}${path}`
